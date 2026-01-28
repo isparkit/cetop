@@ -1,0 +1,366 @@
+/* ============================================
+   ASSOCIATION MAP WITH TABS - MODERN UI/UX
+   ============================================ */
+/* Copy Shortcode Button */
+.copy-shortcode {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: #f6f7f7;
+  border: 1px solid #dcdcde;
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-family: monospace;
+}
+
+.copy-shortcode code {
+  background: transparent;
+  padding: 0;
+  font-size: 14px;
+  color: #1d2327;
+}
+
+.copy-shortcode button {
+  background: #2271b1;
+  color: #ffffff;
+  border: none;
+  padding: 4px 10px;
+  font-size: 13px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* Map Container */
+#amt-map {
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12);
+  margin-bottom: 40px;
+  overflow: hidden;
+  transition: box-shadow 0.3s ease;
+  background: linear-gradient(135deg, #f5f5f5 0%, #fafafa 100%);
+  border: 1px solid #e8e8e8;
+}
+
+#amt-map:hover {
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+}
+
+/* Main Container */
+.amt-container {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 32px;
+  margin-top: 40px;
+}
+
+/* Sidebar with Tabs */
+.amt-tabs-sidebar {
+  position: sticky;
+  top: 20px;
+  max-height: calc(100vh - 40px);
+  overflow-y: auto;
+}
+
+.amt-tabs-sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.amt-tab-btn {
+  padding: 14px 16px;
+  border: none;
+  background: #f5f5f5;
+  color: #333;
+  cursor: pointer;
+  border-left: 4px solid #ddd;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  font-weight: 500;
+  font-size: 14px;
+  border-radius: 0 6px 6px 0;
+  text-align: left;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.amt-tab-btn:hover {
+  background: #e8f0ff;
+  border-left-color: #4a90e2;
+  transform: translateX(4px);
+}
+
+.amt-tab-btn.active {
+  background: linear-gradient(135deg, #1a7f37 0%, #0d5a28 100%);
+  color: #fff;
+  border-left-color: #fff;
+  box-shadow: 0 4px 12px rgba(26, 127, 55, 0.3);
+  font-weight: 600;
+}
+
+/* Contents Area */
+.amt-contents {
+  width: 100%;
+}
+
+.amt-content {
+  display: none;
+  gap: 36px;
+  margin-top: 20px;
+  animation: fadeInUp 0.4s ease;
+}
+
+.amt-content.active {
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  animation: fadeInUp 0.4s ease;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Company Header / Info Card */
+.company-header {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  background: #fafafa;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
+
+.amt-featured-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.company-header h3 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 700;
+  color: #1a1a1a;
+  line-height: 1.4;
+}
+
+.amt-meta {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.amt-meta li {
+  font-size: 13px;
+  color: #555;
+  line-height: 1.5;
+  border-bottom: 1px solid #e0e0e0;
+  padding-bottom: 10px;
+}
+
+.amt-meta li:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.amt-meta strong {
+  color: #1a1a1a;
+  font-weight: 600;
+  display: block;
+  margin-bottom: 4px;
+}
+
+.amt-meta a {
+  color: #1a7f37;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s ease;
+  word-break: break-word;
+}
+
+.amt-meta a:hover {
+  color: #0d5a28;
+  text-decoration: underline;
+}
+
+/* Description Area */
+.amt-desc {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.amt-country {
+  font-family: Source Sans Pro;
+  font-weight: 300;
+  font-style: Light;
+  text-transform: uppercase;
+  font-size: 20px;
+  line-height: 100%;
+  letter-spacing: 0%;
+}
+
+.amt-desc h2 {
+  font-family: Fjalla One;
+  font-weight: 400;
+  font-style: Regular;
+  font-size: 28px;
+  leading-trim: NONE;
+  line-height: 100%;
+  letter-spacing: 0%;
+}
+
+.amt-desc > p,
+.amt-desc > div {
+font-family: Source Sans Pro;
+font-weight: 400;
+font-style: Italic;
+font-size: 20px;
+leading-trim: NONE;
+line-height: 150%;
+letter-spacing: 0%;
+
+}
+
+.amt-desc a {
+  color: #1a7f37;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.amt-desc a:hover {
+  color: #0d5a28;
+  text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .amt-container {
+    grid-template-columns: 1fr;
+  }
+
+  .amt-tabs-sidebar {
+    position: relative;
+    top: 0;
+    max-height: none;
+  }
+
+  .amt-tabs-sidebar ul {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .amt-tab-btn {
+    flex: 1;
+    min-width: 140px;
+    text-align: center;
+    border-left: none;
+    border-bottom: 3px solid #ddd;
+    border-radius: 6px 6px 0 0;
+  }
+
+  .amt-tab-btn:hover {
+    border-left: none;
+    border-bottom-color: #4a90e2;
+  }
+
+  .amt-tab-btn.active {
+    border-left: none;
+    border-bottom-color: #fff;
+  }
+}
+
+@media (max-width: 768px) {
+  .amt-content.active {
+    grid-template-columns: 1fr;
+  }
+
+  .amt-container {
+    gap: 20px;
+  }
+
+  .amt-tab-btn {
+    padding: 12px 12px;
+    font-size: 13px;
+    min-width: 100px;
+  }
+
+  .amt-content {
+    gap: 24px;
+  }
+
+  .company-header {
+    padding: 16px;
+  }
+
+  .company-header h3 {
+    font-size: 16px;
+  }
+
+  .amt-desc h2 {
+    font-size: 22px;
+  }
+
+  .amt-desc > p,
+  .amt-desc > div {
+    font-size: 14px;
+  }
+
+  #amt-map {
+    height: 350px !important;
+    margin-bottom: 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  .amt-container {
+    gap: 16px;
+  }
+
+  .amt-tabs-sidebar ul {
+    gap: 4px;
+  }
+
+  .amt-tab-btn {
+    padding: 10px 8px;
+    font-size: 12px;
+  }
+
+  .company-header {
+    padding: 12px;
+  }
+
+  .amt-meta li {
+    font-size: 12px;
+  }
+
+  .amt-desc h2 {
+    font-size: 18px;
+  }
+
+  #amt-map {
+    height: 280px !important;
+    margin-bottom: 20px;
+  }
+
+  .amt-featured-img {
+    aspect-ratio: 16/9;
+  }
+}

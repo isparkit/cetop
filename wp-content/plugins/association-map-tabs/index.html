@@ -1,0 +1,276 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AITTOP - Company Profile</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f5f5f5;
+      }
+
+      .container {
+        display: flex;
+        max-width: 1400px;
+        margin: 0 auto;
+        background-color: white;
+      }
+
+      .sidebar {
+        width: 20%;
+        background-color: #f8f8f8;
+        padding: 30px 20px;
+        border-right: 1px solid #e0e0e0;
+      }
+
+      .sidebar h3 {
+        font-size: 14px;
+        color: #333;
+        margin-bottom: 20px;
+        font-weight: 600;
+      }
+
+      .sidebar ul {
+        list-style: none;
+      }
+
+      .sidebar li {
+        padding: 8px 0;
+        font-size: 13px;
+        color: #666;
+        cursor: pointer;
+      }
+
+      .sidebar li:hover {
+        color: #4caf50;
+      }
+
+      .main-content {
+        flex: 1;
+        padding: 40px;
+      }
+
+      .map-section {
+        width: 100%;
+        height: 300px;
+        background-color: #e8e8e8;
+        margin-bottom: 40px;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .map-section img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .chat-icon {
+        position: fixed;
+        bottom: 30px;
+        right: 30px;
+        width: 60px;
+        height: 60px;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+      }
+
+      .chat-icon::after {
+        content: "💬";
+        font-size: 28px;
+      }
+
+      .company-header {
+        width: 30%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+        margin-bottom: 30px;
+      }
+
+      .company-logo {
+        width: 180px;
+        height: auto;
+      }
+
+      .company-title h1 {
+        font-size: 28px;
+        color: #333;
+        margin-bottom: 10px;
+      }
+
+      .company-description {
+        font-size: 13px;
+        line-height: 1.6;
+        color: #666;
+        margin-bottom: 20px;
+      }
+
+      .company-info {
+        width: 50%;
+        margin-bottom: 40px;
+      }
+
+      .info-section {
+        margin-bottom: 30px;
+      }
+
+      .info-section h3 {
+        font-size: 16px;
+        color: #333;
+        margin-bottom: 12px;
+        font-weight: 600;
+      }
+
+      .info-section p {
+        font-size: 13px;
+        line-height: 1.7;
+        color: #666;
+      }
+
+      .contact-info {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        font-size: 13px;
+        color: #666;
+      }
+
+      .contact-info div {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+
+      .service-list {
+        list-style: none;
+        padding-left: 0;
+      }
+
+      .service-list li {
+        font-size: 13px;
+        color: #666;
+        padding: 6px 0;
+        padding-left: 20px;
+        position: relative;
+      }
+
+      .service-list li::before {
+        content: "•";
+        position: absolute;
+        left: 5px;
+        color: #4caf50;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container map">
+      <div id="amt-map" style="height:500px;"></div>
+    </div>
+    <div class="container">
+      <div class="sidebar">
+        <h3>Belgium Subsidiaries</h3>
+        <ul>
+          <li>Cacis Scientific SPRL</li>
+          <li>Diabetix (Belg)</li>
+          <li>Finland EHN</li>
+          <li>France AITTOP</li>
+          <li>Germany MMA</li>
+          <li>Israel GMATLAB</li>
+          <li>Netherlands DHL</li>
+          <li>Norway NRA</li>
+          <li>Poland Corporation</li>
+          <li>Romania Helsinki</li>
+          <li>Slovenia CTE</li>
+          <li>Spain JETMIP</li>
+          <li>Sweden MINA</li>
+          <li>Switzerland KT</li>
+          <li>Switzerland SIM</li>
+          <li>Switzerland TOLENERG</li>
+          <li>Türkiye AMBER</li>
+        </ul>
+      </div>
+
+      <div class="company-header">
+        <div class="company-logo">
+            <img
+                src="https://via.placeholder.com/180x80/cccccc/666666?text=Company+Logo"
+                alt="Company Logo"
+            />
+        </div>
+         <div class="info-section">
+        <h3>AUTHOR</h3>
+        <div class="contact-info">
+          <div>Manuel Gomez Prat Caballero</div>
+          <div>Lluisa Moret 210</div>
+          <div>VPO-Carrego de Terreasa</div>
+          <div>08221 Terreasa Barcelona</div>
+          <div>SPAIN</div>
+          <div>📞 (+34) 93 733 59 00</div>
+          <div>✉️ aittop@aittop.es</div>
+        </div>
+      </div>
+      </div>
+     
+
+      <div class="company-info">
+        <div class="company-title">
+          <h1>AITTOP</h1>
+        </div>
+
+        <div class="company-description">
+          <p>
+            AITTOP is a member of the Association of Manufacturers and Trading
+            Companies in Fluid Power Transmissions and Components. It is since
+            its 2008 as a class-dominant Spain AITTOP and through its centers
+            AITTOP was founded in 1945 and with the aim of trading technical
+            articles for industry (piping, valves, fittings, pumps, pneumatic
+            transmissions, Photography Technology).
+          </p>
+          <br />
+          <p>
+            AITTOP is a business where manufacturers, suppliers, distributors,
+            customers and users of transmission and mobile equipment, machine
+            automation, driven by fluid power for hydraulics. The Association
+            advises in numerous projects of standards and regulations in Spain
+            and abroad.
+          </p>
+        </div>
+
+        <div class="info-section">
+          <h3>Service</h3>
+          <ul class="service-list">
+            <li>
+              Technical support in development of the domestic sector of fluid
+              power industry
+            </li>
+            <li>
+              National & international Statistics / Market data for Fluid Power
+            </li>
+            <li>
+              Information about European/International-National and
+              International Standards
+            </li>
+            <li>
+              Ongoing contacts and communication with education institutions
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
